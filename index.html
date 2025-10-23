@@ -1,56 +1,236 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfólio - Davi Lima</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davi Lima — Portfólio</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <div class="logo">DevX</div>
-    <nav>
-      <ul>
-        <li><a href="#sobre">Sobre</a></li>
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#projetos">Projetos</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-
   <main>
-    <section id="sobre" class="card">
-      <h2>Sobre mim</h2>
-      <p>Sou Davi Lima Alves da Silva, apaixonado por tecnologia, análise e desenvolvimento de sistemas. 
-      Minha visão é criar soluções digitais que unem comportamento humano e inovação.</p>
-    </section>
+    <!-- SIDEBAR -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <!-- substitua por sua foto em ./assets/images/avatar.png -->
+          <img src="./assets/images/avatar.png" alt="Davi Lima" width="92" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2292%22 height=%2292%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23333%22/><text x=%2250%22 y=%2255%22 fill=%22%23fff%22 font-size=%2238%22 font-family=%22Poppins,sans-serif%22 text-anchor=%22middle%22>DL</text></svg>'" />
+        </figure>
 
-    <section id="experiencia" class="card">
-      <h2>Experiência</h2>
-      <ul>
-        <li>Atendimento ao cliente (chat, e-mail, WhatsApp).</li>
-        <li>Resolução de problemas e suporte técnico.</li>
-        <li>Áreas de interesse: Estágio em ADS, Analista de Suporte Jr, Operações.</li>
-      </ul>
-    </section>
+        <div class="info-content">
+          <h1 class="name" title="Davi Lima">Davi Lima</h1>
+          <p class="title">Estudante de ADS • Desenvolvedor Web Jr.</p>
+        </div>
 
-    <section id="projetos" class="card">
-      <h2>Projetos</h2>
-      <p><strong>DevX</strong> – Rede social para desenvolvedores e entusiastas de tecnologia.</p>
-    </section>
+        <button class="info_more-btn" data-sidebar-btn aria-expanded="false">
+          <span>Mostrar contatos</span>
+          <svg class="chev" viewBox="0 0 24 24" width="18" height="18" aria-hidden><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
 
-    <section id="contato" class="card">
-      <h2>Contato</h2>
-      <p>📍 João Pessoa - PB</p>
-      <p>📧 seuemail@email.com</p>
-      <p>📱 (83) 9 9375-8856</p>
-    </section>
+      <div class="sidebar-info_more" hidden>
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">✉️</div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:davilimasilva220@gmail.com" class="contact-link">davilimasilva220@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">📍</div>
+            <div class="contact-info">
+              <p class="contact-title">Localização</p>
+              <address>João Pessoa, PB — Brasil</address>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">📅</div>
+            <div class="contact-info">
+              <p class="contact-title">Disponibilidade</p>
+              <p>Estágio / Freelance</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <li class="social-item"><a href="https://github.com/davilima1" class="social-link" target="_blank" rel="noopener">GitHub</a></li>
+          <li class="social-item"><a href="https://www.linkedin.com/in/davilima220" class="social-link" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li class="social-item"><a href="https://www.instagram.com/davilima220/" class="social-link" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <nav class="navbar">
+        <ul class="navbar-list" role="tablist" aria-label="Navegação do portfólio">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link data-target="about">Sobre</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="resume">Resumo</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="portfolio">Projetos</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="blog">Blog</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link data-target="contact">Contato</button></li>
+        </ul>
+      </nav>
+
+      <!-- ABOUT -->
+      <article class="page about active" data-page="about" id="about">
+        <header><h2 class="article-title">Sobre mim</h2></header>
+
+        <section class="about-text">
+          <p>Sou <strong>Davi Lima</strong>, estudante de Análise e Desenvolvimento de Sistemas (ADS). Transformo problemas em código e ideias em MVPs — gosto de front-end, lógica e produtos que vendem por si só. Trabalho em cima de metodologias práticas: simplicidade, clareza e resultado.</p>
+
+          <p>Atualmente desenvolvo o <strong>PulseMind</strong> — um planner inteligente com IA — e estudo para me especializar em JavaScript, back-end e automações de venda. Meu objetivo é criar produtos funcionais e sustentáveis que realmente resolvam dor do usuário.</p>
+        </section>
+
+        <section class="service">
+          <h3 class="service-title">O que eu faço</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">💻</div>
+              <div class="service-content-box">
+                <h4 class="service-item-title">Desenvolvimento Web</h4>
+                <p class="service-item-text">Front-end com foco em experiência, responsividade e performance.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">⚙️</div>
+              <div class="service-content-box">
+                <h4 class="service-item-title">Sistemas & Back-end</h4>
+                <p class="service-item-text">APIs simples, bancos relacionais e lógica escalável.</p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">🧠</div>
+              <div class="service-content-box">
+                <h4 class="service-item-title">Produtos com IA</h4>
+                <p class="service-item-text">Integração de modelos e automações para produtos como PulseMind.</p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- RESUME -->
+      <article class="page resume" data-page="resume" id="resume">
+        <header><h2 class="article-title">Resumo</h2></header>
+
+        <section class="timeline">
+          <div class="title-wrapper"><h3>Formação</h3></div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Análise e Desenvolvimento de Sistemas (EAD)</h4>
+              <span>Estácio — em andamento</span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Cursos livres</h4>
+              <span>HTML/CSS • JS básico • Git</span>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper"><h3>Experiência</h3></div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">PulseMind — Projeto pessoal</h4>
+              <span>2024 — presente</span>
+              <p class="timeline-text">Desenvolvimento do MVP, front-end e arquitetura inicial integrada com automações.</p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="timeline-item-title">Freelance & estudos</h4>
+              <span>2023 — presente</span>
+              <p class="timeline-text">Pequenos projetos web, landing pages e manutenção.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="skills-title">Habilidades</h3>
+          <ul class="skills-list">
+            <li class="skills-item"><h5>HTML & CSS</h5><data value="85">85%</data><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:85%"></div></div></li>
+            <li class="skills-item"><h5>JavaScript</h5><data value="70">70%</data><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:70%"></div></div></li>
+            <li class="skills-item"><h5>Git & GitHub</h5><data value="75">75%</data><div class="skill-progress-bg"><div class="skill-progress-fill" style="width:75%"></div></div></li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- PORTFOLIO -->
+      <article class="page portfolio" data-page="portfolio" id="portfolio">
+        <header><h2 class="article-title">Projetos</h2></header>
+
+        <section class="projects">
+          <ul class="project-list">
+            <!-- PulseMind destaque -->
+            <li class="project-item">
+              <a href="#" class="project-link" data-project="pulsemind">
+                <figure class="project-img">
+                  <img src="./assets/images/pulsemind.png" alt="PulseMind" onerror="this.src='./assets/images/project-placeholder.png'">
+                </figure>
+                <h3 class="project-title">PulseMind</h3>
+                <p class="project-category">Planner com IA — MVP</p>
+              </a>
+            </li>
+
+            <!-- Exemplo outros -->
+            <li class="project-item">
+              <a href="#" class="project-link">
+                <figure class="project-img"><img src="./assets/images/project-2.png" alt="Projeto 2" onerror="this.src='./assets/images/project-placeholder.png'"></figure>
+                <h3 class="project-title">DevNex (Protótipo)</h3>
+                <p class="project-category">Rede social para devs</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- BLOG (simples) -->
+      <article class="page blog" data-page="blog" id="blog">
+        <header><h2 class="article-title">Blog</h2></header>
+        <section class="blog-posts">
+          <p class="muted">Em construção — aqui vão artigos sobre dev, produtos e processos.</p>
+        </section>
+      </article>
+
+      <!-- CONTACT -->
+      <article class="page contact" data-page="contact" id="contact">
+        <header><h2 class="article-title">Contato</h2></header>
+
+        <section class="contact-form">
+          <h3 class="form-title">Fale comigo</h3>
+          <form action="mailto:davilimasilva220@gmail.com" method="post" enctype="text/plain" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Nome completo" required />
+              <input type="email" name="email" class="form-input" placeholder="E-mail" required />
+            </div>
+            <textarea name="message" class="form-input" placeholder="Sua mensagem" required></textarea>
+            <button class="form-btn" type="submit" data-form-btn>
+              ✉️ Enviar mensagem
+            </button>
+          </form>
+        </section>
+
+        <section class="mapbox">
+          <p class="muted">Local: João Pessoa, PB</p>
+        </section>
+      </article>
+    </div>
   </main>
-
-  <footer>
-    <p>© 2025 - Criado por Davi Lima | Powered by DevX</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
