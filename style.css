@@ -2,7 +2,7 @@
   --bg: #0f1723;
   --card: #0b1220;
   --muted: #9aa4b2;
-  --accent: #6ee7b7;
+  --accent: #3D78E5;
   --glass: rgba(255,255,255,0.03);
   --radius: 14px;
   --gap: 18px;
@@ -114,3 +114,30 @@ main{display:flex;min-height:100vh;gap:var(--gap);padding:32px}
   .project-item{width:100%}
   .service-item{width:100%}
 }
+/* ----- Blog / Revista criativa (sem fotos) ----- */
+.blog-controls{display:flex;gap:12px;align-items:center;margin-bottom:14px}
+.blog-controls input[type="search"]{
+  flex:1;padding:10px;border-radius:10px;border:0;background:rgba(255,255,255,0.02);color:inherit;outline:none
+}
+.blog-controls select{
+  padding:10px;border-radius:10px;border:0;background:rgba(255,255,255,0.02);color:inherit;outline:none;font-weight:600
+}
+
+.blog-posts{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.blog-card{background:linear-gradient(180deg, rgba(255,255,255,0.015), transparent);padding:14px;border-radius:10px;cursor:pointer;transition:transform .14s ease, box-shadow .14s ease}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(3,7,20,0.5)}
+.blog-card .meta{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:0.9rem;margin-bottom:6px}
+.blog-card .title{font-size:1.05rem;margin:0 0 6px 0}
+.blog-card .excerpt{margin:0;color:var(--muted);font-size:0.95rem;line-height:1.4}
+
+/* post single */
+.post-single{background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);padding:18px;border-radius:10px;margin-top:12px}
+.post-single .post-title{font-size:1.35rem;margin:0 0 8px 0}
+.post-single .post-meta{color:var(--muted);margin-bottom:12px}
+.post-single .post-body{color:#e7f6f2;line-height:1.7;white-space:pre-line}
+
+/* back button style */
+.btn-link{background:transparent;border:0;color:var(--accent);cursor:pointer;font-weight:700;padding:6px;margin-bottom:10px}
+
+/* responsivo */
+@media (max-width:900px){ .blog-posts{grid-template-columns:repeat(1,1fr)} }

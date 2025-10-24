@@ -21,7 +21,7 @@
       <div class="sidebar-info">
         <figure class="avatar-box">
           <!-- substitua por sua foto em ./assets/images/avatar.png -->
-          <img src="./assets/images/avatar.png" alt="Davi Lima" width="92" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2292%22 height=%2292%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23333%22/><text x=%2250%22 y=%2255%22 fill=%22%23fff%22 font-size=%2238%22 font-family=%22Poppins,sans-serif%22 text-anchor=%22middle%22>DL</text></svg>'" />
+          <img src="Screenshot_20241218_093901_Instagram (1).jpg" alt="Davi Lima" width="92" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2292%22 height=%2292%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22%23333%22/><text x=%2250%22 y=%2255%22 fill=%22%23fff%22 font-size=%2238%22 font-family=%22Poppins,sans-serif%22 text-anchor=%22middle%22>DL</text></svg>'" />
         </figure>
 
         <div class="info-content">
@@ -87,14 +87,20 @@
       </nav>
 
       <!-- ABOUT -->
-      <article class="page about active" data-page="about" id="about">
-        <header><h2 class="article-title">Sobre mim</h2></header>
+<article class="page about active" data-page="about" id="about">
+  <header><h2 class="article-title">Sobre mim</h2></header>
 
-        <section class="about-text">
-          <p>Sou <strong>Davi Lima</strong>, estudante de Análise e Desenvolvimento de Sistemas (ADS). Transformo problemas em código e ideias em MVPs — gosto de front-end, lógica e produtos que vendem por si só. Trabalho em cima de metodologias práticas: simplicidade, clareza e resultado.</p>
+  <section class="about-text">
+    <p>Sou <strong>Davi Lima</strong> — entre linhas de código e café noturno, busco dar forma ao invisível. Estudo <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> e sigo o caminho da tecnologia como quem escreve o próprio destino em binário.</p>
 
-          <p>Atualmente desenvolvo o <strong>PulseMind</strong> — um planner inteligente com IA — e estudo para me especializar em JavaScript, back-end e automações de venda. Meu objetivo é criar produtos funcionais e sustentáveis que realmente resolvam dor do usuário.</p>
-        </section>
+    <p>Gosto de criar o que respira lógica, mas também emoção. Transformo ideias em projetos reais — MVPs que unem design, propósito e resultado. Acredito que tecnologia só tem valor quando simplifica a vida e inspira quem a usa.</p>
+
+    <p>Hoje, dedico-me ao <strong>PulseMind</strong>, um planner inteligente com IA que une organização, reflexão e propósito. Paralelamente, aprofundo-me em <strong>JavaScript</strong>, <strong>back-end</strong> e <strong>automações de venda</strong> — ferramentas do futuro que moldam o agora.</p>
+
+    <p>Mas além do código, vivo de curiosidade: escrevo, reflito e observo como as pequenas coisas — uma boa conversa, uma linha de raciocínio, um erro de sintaxe — podem mudar tudo. No fim, programar é isso: encontrar sentido no caos.</p>
+  </section>
+</article>
+
 
         <section class="service">
           <h3 class="service-title">O que eu faço</h3>
@@ -192,20 +198,44 @@
               <a href="#" class="project-link">
                 <figure class="project-img"><img src="./assets/images/project-2.png" alt="Projeto 2" onerror="this.src='./assets/images/project-placeholder.png'"></figure>
                 <h3 class="project-title">DevNex (Protótipo)</h3>
-                <p class="project-category">Rede social para devs</p>
+                <p class="project-category">Network para devs</p>
               </a>
             </li>
           </ul>
         </section>
       </article>
 
-      <!-- BLOG (simples) -->
-      <article class="page blog" data-page="blog" id="blog">
-        <header><h2 class="article-title">Blog</h2></header>
-        <section class="blog-posts">
-          <p class="muted">Em construção — aqui vão artigos sobre dev, produtos e processos.</p>
-        </section>
-      </article>
+      <!-- BLOG -->
+<article class="page blog" data-page="blog" id="blog">
+  <header>
+    <h2 class="article-title">Blog</h2>
+    <p class="muted">Pensamentos técnicos, notas de projeto e reflexões — direto, honesto e sem filtro.</p>
+  </header>
+
+  <section class="blog-controls">
+    <input id="search-input" type="search" placeholder="Buscar posts (ex: React, PulseMind, vida)" />
+    <select id="filter-select" aria-label="Filtrar por categoria">
+      <option value="all">Todas</option>
+      <option value="tecnologia">Tecnologia</option>
+      <option value="programacao">Programação</option>
+      <option value="vida">Vida Pessoal</option>
+      <option value="reflexoes">Reflexões</option>
+    </select>
+  </section>
+
+  <section class="blog-posts" id="posts-list" aria-live="polite">
+    <!-- cards gerados por JS -->
+  </section>
+
+  <!-- container do post único (invisível até clicar em um post) -->
+  <section class="post-single" id="post-single" hidden>
+    <button id="back-to-list" class="btn-link">← Voltar</button>
+    <article id="post-content">
+      <!-- título, meta e conteúdo preenchidos por JS -->
+    </article>
+  </section>
+</article>
+
 
       <!-- CONTACT -->
       <article class="page contact" data-page="contact" id="contact">
@@ -235,3 +265,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
